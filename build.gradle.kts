@@ -7,9 +7,6 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven {
-        setUrl("https://plugins.gradle.org/m2/")
-    }
 }
 
 dependencies {
@@ -23,7 +20,7 @@ dependencies {
     implementation ("org.openjfx:javafx-web:16")
     implementation ("org.openjfx:javafx-swing:16")
     implementation ("org.openjfx:javafx-swt:16")
-    implementation ("org.openjfx:javafx-graphics:16")
+    
 }
 
 tasks.test {
