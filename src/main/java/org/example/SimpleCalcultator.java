@@ -2,10 +2,11 @@ package org.example;
 
 //int type = -2147483648 -> 2147483647.
 public class SimpleCalcultator {
-    public static void main(String[] args){
+    public static int main(String[] args){
         int input=Integer.parseInt(args[0]);
         int input2=Integer.parseInt(args[2]);
         String operator=args[1];
+        return SimpleCalculation(input,input2,operator);
 
     }
     public static int SimpleCalculation(int a, int b, String operator){
@@ -15,7 +16,7 @@ public class SimpleCalcultator {
                 result=a + b;
                 break;
             case "-":
-                result=a -b ;
+                result=a - b ;
                 break;
             case "*":
                 result= a * b;
@@ -25,6 +26,7 @@ public class SimpleCalcultator {
                 break;
             default:
                 System.out.println("Illegal Operation");
+                result =100000000;
                 break;
         }
         if (checkSizeLimit(result)>0){
